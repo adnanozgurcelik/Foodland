@@ -1,5 +1,6 @@
 package com.adnanozgurcelik.foodland.data.mapper
 
+import com.adnanozgurcelik.foodland.data.local.FoodEntity
 import com.adnanozgurcelik.foodland.data.remote.dto.info_dto.FoodInfoDto
 import com.adnanozgurcelik.foodland.data.remote.dto.search_dto.SearchDto
 import com.adnanozgurcelik.foodland.domain.model.info.FoodInfo
@@ -20,7 +21,7 @@ fun FoodInfoDto.toFoodInfo(): FoodInfo
     dishTypes = dishTypes ?: emptyList(),
     extendedIngredients = extendedIngredients ?: emptyList(),
     glutenFree = glutenFree ?: false,
-    healthScore = healthScore ?: healthScore,
+    healthScore = healthScore ?: 0,
     id = id ?: 0,
     image = image ?: "",
     instructions = instructions ?: "",
@@ -31,4 +32,21 @@ fun FoodInfoDto.toFoodInfo(): FoodInfo
     title = title ?: "",
     vegan = vegan ?: false,
     vegetarian = vegetarian ?: false,
+)
+
+fun FoodInfo.toFoodEntity(): FoodEntity
+= FoodEntity(
+    dairyFree = dairyFree,
+    dishTypes = dishTypes,
+    glutenFree = glutenFree,
+    healthScore = healthScore,
+    image = image,
+    instructions = instructions,
+    readyInMinutes = readyInMinutes,
+    servings = servings,
+    score = score,
+    summary = summary,
+    title = title,
+    vegan = vegan,
+    vegetarian = vegetarian,
 )
