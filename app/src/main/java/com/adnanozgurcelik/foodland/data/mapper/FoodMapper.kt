@@ -1,4 +1,4 @@
-package com.adnanozgurcelik.foodland.data.remote.mapper
+package com.adnanozgurcelik.foodland.data.mapper
 
 import com.adnanozgurcelik.foodland.data.remote.dto.info_dto.FoodInfoDto
 import com.adnanozgurcelik.foodland.data.remote.dto.search_dto.SearchDto

@@ -1,6 +1,6 @@
 package com.adnanozgurcelik.foodland.domain.use_case.api_use_case
 
-import com.adnanozgurcelik.foodland.data.remote.mapper.toFoodInfo
+import com.adnanozgurcelik.foodland.data.mapper.toFoodInfo
 import com.adnanozgurcelik.foodland.domain.model.info.FoodInfo
 import com.adnanozgurcelik.foodland.domain.repository.api.FoodApiRepository
 import com.adnanozgurcelik.foodland.util.Resource
