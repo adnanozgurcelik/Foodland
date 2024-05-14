@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.daggerHiltAndroid)
+    alias(libs.plugins.devToolsKsp)
 }
 
 android {
@@ -37,12 +39,15 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.5.1'
+        kotlinCompilerExtensionVersion '1.5.10'
     }
     packaging {
         resources {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
+    }
+    ksp {
+        arg('room.schemaLocation', "$projectDir/schemas")
     }
 }
 
@@ -63,4 +68,40 @@ dependencies {
     androidTestImplementation libs.androidx.ui.test.junit4
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
+
+    //Lifecycle
+    implementation libs.lifecycleCompose
+    implementation libs.navigationCompose
+    implementation libs.accompanist
+
+    //Coroutines
+    implementation libs.coroutinesCore
+    implementation libs.coroutinesAndroid
+
+    //CoroutinesLifecycle
+    implementation libs.coroutinesLifecycleViewModel
+    implementation libs.coroutinesLifecycleRuntime
+
+    //Dagger-Hilt
+    implementation libs.hiltDagger
+    ksp libs.hiltDaggerAndroidCompiler
+    ksp libs.hiltDaggerCompiler
+    implementation libs.hiltCompose
+    implementation libs.hiltWork
+    implementation libs.workRuntime
+
+    //Retrofit
+    implementation libs.retrofit
+    implementation libs.gsonConverter
+    implementation libs.okhttp
+    implementation libs.okhttpLogging
+
+    //Coil
+    implementation libs.coil
+
+    //Room
+    implementation libs.room
+    ksp libs.roomCompiler
+    implementation libs.roomKtx
+    ksp libs.kspRoom
 }
