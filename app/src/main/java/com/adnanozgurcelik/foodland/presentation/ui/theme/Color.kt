@@ -1,4 +1,4 @@
-package com.adnanozgurcelik.foodland.ui.theme
+package com.adnanozgurcelik.foodland.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

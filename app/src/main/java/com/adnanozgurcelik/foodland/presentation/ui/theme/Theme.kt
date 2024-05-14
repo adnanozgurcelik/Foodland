@@ -1,4 +1,4 @@
-package com.adnanozgurcelik.foodland.ui.theme
+package com.adnanozgurcelik.foodland.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
