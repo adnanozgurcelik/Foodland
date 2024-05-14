@@ -6,8 +6,8 @@ import com.adnanozgurcelik.foodland.domain.model.search.Search
 fun SearchDto.toSearch(): List<Search>
 = results!!.map { results ->
     Search(
-        id = results.id,
-        image = results.image,
-        title = results.title
+        id = results.id ?: 0,
+        image = results.image ?: "",
+        title = results.title ?: ""
     )
 }
