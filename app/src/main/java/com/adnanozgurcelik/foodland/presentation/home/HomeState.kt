@@ -7,6 +7,6 @@ data class HomeState(
     val data: List<Search>? = emptyList(),
     val isLoading: Boolean = false,
     val error: String = "",
-    val toastMessage: String = "",
-    val foodId: String = ""
+    val toastMessage: String? = "",
+    val foodId: String? = ""
 )

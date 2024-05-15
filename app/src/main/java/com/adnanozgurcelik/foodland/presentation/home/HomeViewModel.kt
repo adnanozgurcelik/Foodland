@@ -38,7 +38,7 @@ class HomeViewModel @Inject constructor(
     fun onEvent(event: HomeEvent) {
         when(event) {
             is HomeEvent.AddToFav -> {
-                addToFav(state.foodId)
+                addToFav(id = state.foodId ?: "")
             }
             is HomeEvent.DeleteFromFav -> {
                 deleteFromFav(event.foodEntity)
