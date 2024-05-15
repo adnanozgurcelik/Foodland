@@ -28,7 +28,7 @@ class SearchViewModel @Inject constructor(
 ): ViewModel() {
 
     var state by mutableStateOf(SearchState())
-    private var recentlyDeletedNote: FoodEntity? = null
+    private var recentlyDeletedFood: FoodEntity? = null
     private var job: Job? = null
 
     init {
@@ -129,7 +129,7 @@ class SearchViewModel @Inject constructor(
         try {
             viewModelScope.launch {
                 dbUseCases.deleteFavFood.invoke(foodEntity)
-                recentlyDeletedNote = foodEntity
+                recentlyDeletedFood = foodEntity
             }
         } catch (e: Exception) {
             state = state.copy(

@@ -29,7 +29,7 @@ class HomeViewModel @Inject constructor(
         "pasta", "pizza", "chicken", "beef", "pork", "sandwich", "rice", "fish"
     )
     private var selectRandom = mainFoods.random()
-    private var recentlyDeletedNote: FoodEntity? = null
+    private var recentlyDeletedFood: FoodEntity? = null
 
     init {
         getRecommendedFoods()
@@ -115,7 +115,7 @@ class HomeViewModel @Inject constructor(
         try {
             viewModelScope.launch {
                 dbUseCases.deleteFavFood.invoke(foodEntity)
-                recentlyDeletedNote = foodEntity
+                recentlyDeletedFood = foodEntity
             }
         } catch (e: Exception) {
             state = state.copy(
