@@ -95,7 +95,7 @@ fun HomeScreen(
                 RecommendedFoods(
                     search = foods,
                     onClick = {
-                        navController.navigate(AppScreens.Detail.name)
+                        navController.navigate(route = AppScreens.Detail.name + "/${foods.id}")
                     }
                 )
             }

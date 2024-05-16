@@ -6,5 +6,5 @@ import com.adnanozgurcelik.foodland.data.remote.dto.search_dto.SearchDto
 interface FoodApiRepository {
     suspend fun getFoodsBySearch(query: String): SearchDto
     suspend fun getFoodsByCuisine(cuisine: String): SearchDto
-    suspend fun getFoodInfo(id: String): FoodInfoDto
+    suspend fun getFoodInfo(id: Int): FoodInfoDto
 }

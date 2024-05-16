@@ -38,7 +38,7 @@ class HomeViewModel @Inject constructor(
     fun onEvent(event: HomeEvent) {
         when(event) {
             is HomeEvent.AddToFav -> {
-                addToFav(id = state.foodId ?: "")
+                addToFav(id = state.foodId ?: 633376)
             }
             is HomeEvent.DeleteFromFav -> {
                 deleteFromFav(event.foodEntity)
@@ -55,7 +55,7 @@ class HomeViewModel @Inject constructor(
                             result.data?.let { foods ->
                                 state = state.copy(
                                     data = foods,
-                                    foodId = foods[0].id.toString()
+                                    foodId = foods[0].id
                                 )
                             }
                         }
@@ -74,7 +74,7 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun addToFav(id: String) {
+    private fun addToFav(id: Int) {
         try {
             viewModelScope.launch {
                 apiUseCases.getFoodInfo.invoke(id)

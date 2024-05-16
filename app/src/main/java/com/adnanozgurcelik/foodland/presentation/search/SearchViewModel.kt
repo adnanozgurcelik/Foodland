@@ -46,7 +46,7 @@ class SearchViewModel @Inject constructor(
                 }
             }
             is SearchEvent.AddToFav -> {
-                addToFav(id = state.foodId ?: "")
+                addToFav(id = state.foodId ?: 633376)
             }
             is SearchEvent.DeleteFromFav -> {
 
@@ -70,7 +70,7 @@ class SearchViewModel @Inject constructor(
                             result.data?.let { searches ->
                                 state = state.copy(
                                     data = searches,
-                                    foodId = searches[0].id.toString()
+                                    foodId = searches[0].id
                                 )
                             }
                         }
@@ -84,7 +84,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private fun addToFav(id: String) {
+    private fun addToFav(id: Int) {
         try {
             viewModelScope.launch {
                 apiUseCases.getFoodInfo.invoke(id)
