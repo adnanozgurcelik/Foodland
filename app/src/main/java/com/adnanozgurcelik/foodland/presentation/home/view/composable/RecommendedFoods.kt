@@ -41,10 +41,7 @@ fun RecommendedFoods(
     Surface(
         onClick = { onClick.invoke() },
         modifier = Modifier
-            .padding(
-                start = 20.dp,
-                end = 20.dp
-            )
+            .padding(start = 20.dp)
             .height(200.dp)
             .width(150.dp),
         color = MaterialTheme.colorScheme.background,
