@@ -1,4 +1,4 @@
-package com.adnanozgurcelik.foodland.presentation.home.view.composable
+package com.adnanozgurcelik.foodland.presentation.main_composables
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
