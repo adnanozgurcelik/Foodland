@@ -8,5 +8,5 @@ data class HomeState(
     val isLoading: Boolean = false,
     val error: String = "",
     val toastMessage: String? = "",
-    val foodId: Int? = 0
+    val foodId: String? = ""
 )

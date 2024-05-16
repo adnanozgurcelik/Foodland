@@ -7,6 +7,6 @@ data class SearchState(
     val error: String? = "",
     val isLoading: Boolean = false,
     val searchQuery: String? = "",
-    val foodId: Int? = 0,
+    val foodId: String? = "",
     val toastMessage: String? = ""
 )

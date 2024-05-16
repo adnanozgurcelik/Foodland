@@ -26,7 +26,7 @@ class DetailViewModel @Inject constructor(
     private var recentlyDeletedFood: FoodEntity? = null
 
     init {
-        savedStateHandle.get<Int>("id")?.let { id ->
+        savedStateHandle.get<String>("id")?.let { id ->
             getFoodInfo(id)
         }
     }
@@ -42,7 +42,7 @@ class DetailViewModel @Inject constructor(
         }
     }
 
-    private fun getFoodInfo(id: Int) {
+    private fun getFoodInfo(id: String) {
         viewModelScope.launch {
             apiUseCases.getFoodInfo.invoke(id)
                 .collect { result ->

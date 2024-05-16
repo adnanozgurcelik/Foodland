@@ -11,7 +11,7 @@ import javax.inject.Inject
 class GetFoodInfo @Inject constructor(
     private val repository: FoodApiRepository
 ) {
-    suspend operator fun invoke(id: Int): Flow<Resource<FoodInfo>>
+    suspend operator fun invoke(id: String): Flow<Resource<FoodInfo>>
     = flow {
         try {
             emit(Resource.Loading())

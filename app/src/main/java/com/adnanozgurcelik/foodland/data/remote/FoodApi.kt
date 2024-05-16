@@ -22,7 +22,7 @@ interface FoodApi {
 
     @GET("/recipes/{id}/information")
     suspend fun getFoodInfo(
-        @Path("id") id: Int,
+        @Path("id") id: String,
         @Query("apiKey") apiKey: String = API_KEY
     ): FoodInfoDto
 }
