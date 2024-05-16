@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -20,7 +19,7 @@ import androidx.navigation.NavController
 import com.adnanozgurcelik.foodland.presentation.home.Cuisines
 import com.adnanozgurcelik.foodland.presentation.home.HomeViewModel
 import com.adnanozgurcelik.foodland.presentation.home.view.composable.CuisineRow
-import com.adnanozgurcelik.foodland.presentation.home.view.composable.CustomText
+import com.adnanozgurcelik.foodland.presentation.main_composables.CustomText
 import com.adnanozgurcelik.foodland.presentation.home.view.composable.ExploreArea
 import com.adnanozgurcelik.foodland.presentation.home.view.composable.RecommendedFoods
 import com.adnanozgurcelik.foodland.presentation.navigation.AppScreens
