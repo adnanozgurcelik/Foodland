@@ -6,7 +6,7 @@ data class SearchState(
     val data: List<Search>? = emptyList(),
     val error: String? = "",
     val isLoading: Boolean = false,
-    val searchQuery: String? = "",
+    var searchQuery: String? = "",
     val foodId: String? = "",
     val toastMessage: String? = ""
 )
