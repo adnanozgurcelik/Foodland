@@ -51,6 +51,7 @@ fun AppBottomBar(
     NavigationBar(
         modifier = Modifier
             .padding(
+            top = 10.dp,
             bottom = 30.dp,
             start = 20.dp,
             end = 20.dp
