@@ -27,11 +27,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
+import com.adnanozgurcelik.foodland.data.local.FoodEntity
 import com.adnanozgurcelik.foodland.domain.model.info.FoodInfo
 
 @Composable
 fun FavoriteColumn(
-    foodInfo: FoodInfo,
+    foodEntity: FoodEntity,
     onClick: () -> Unit
 ) {
     var isClicked by remember { mutableStateOf(false) }
@@ -62,11 +63,11 @@ fun FavoriteColumn(
                     )
             ) {
                 Image(
-                    painter = rememberImagePainter(data = foodInfo.image),
-                    contentDescription = foodInfo.title
+                    painter = rememberImagePainter(data = foodEntity.image),
+                    contentDescription = foodEntity.title
                 )
             }
-            Text(text = foodInfo.title ?: "")
+            Text(text = foodEntity.title ?: "")
         }
         Column(
             horizontalAlignment = Alignment.End,
