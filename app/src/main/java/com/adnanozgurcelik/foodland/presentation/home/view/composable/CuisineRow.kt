@@ -22,7 +22,8 @@ fun CuisineRow(
             .padding(start = 20.dp),
         color = MaterialTheme.colorScheme.background,
         tonalElevation = 5.dp,
-        shape = RoundedCornerShape(15.dp)
+        shape = RoundedCornerShape(15.dp),
+        shadowElevation = 8.dp
     ) {
         Text(
             text = content,
